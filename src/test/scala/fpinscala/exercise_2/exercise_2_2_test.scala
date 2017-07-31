@@ -1,4 +1,4 @@
-package fpinscala.test.exercise_2
+package fpinscala.exercise_2
 
 import fpinscala.exercise_2.exercise_2_2._
 

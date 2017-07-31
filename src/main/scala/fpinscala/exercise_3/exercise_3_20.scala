@@ -1,0 +1,17 @@
+package fpinscala.exercise_3
+
+import scala.annotation.tailrec
+
+object exercise_3_20 {
+
+  def flatMap[A, B](l: List[A])(f: A ⇒ List[B]): List[B] = {
+
+    @tailrec
+    def loop(input: List[A], acc: List[B]): List[B] = input match {
+      case Nil          ⇒ acc
+      case head :: tail ⇒ loop(tail, acc ::: f(head))
+    }
+    loop(l, Nil)
+  }
+
+}
